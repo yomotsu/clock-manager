@@ -1,0 +1,30 @@
+{
+  "name": "clock-manager",
+  "version": "0.0.0",
+  "author": "Yomotsu",
+  "license": "MIT",
+  "repository": "yomotsu/clock-manager",
+  "jsnext:main": "dist/clock-manager.module.js",
+  "module": "dist/clock-manager.module.js",
+  "main": "dist/clock-manager.js",
+  "types": "dist/clock-manager.d.ts",
+  "devDependencies": {
+    "rollup": "^1.4.0",
+    "rollup-plugin-typescript2": "^0.19.3",
+    "rollup-watch": "^4.3.1",
+    "terser": "^3.16.1",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "dev": "rollup --config --watch",
+    "build": "rollup --config && terser 'dist/clock-manager.js' -o 'dist/clock-manager.min.js' --comments '/^!/'"
+  },
+  "keywords": [
+    "time",
+    "clock",
+    "elapsed",
+    "elapsedTime",
+    "delta",
+    "deltaTime"
+  ]
+}
